@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Mileage Calculator</title>
+    <style>
+        body 
+        {
+            background: linear-gradient(white,pink,grey,black);
+        }
+        .id1 
+        {
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        .box 
+        {
+            text-align: center;
+            width: 30%;
+            background-color: palevioletred;
+            border: solid 6px black;
+            padding: 25px;
+            margin: 60px auto;
+        }
+        font{
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 class="id1"><u>The Mileage Calculator</u></h1>
+    <div class="box">
+        <h2><font>Suraj R (25002481)</font></h2><br>
+        <form method="post">
+            {% csrf_token %}
+            <label>Distance Travelled (km)</label><br>
+            <input type="number" name="distance"><br><br>
+
+            <label>Liters Consumed (L)</label><br>
+            <input type="number" name="liters"><br><br>
+
+            <button type="submit">Calculate</button>
+            <br><br>
+            <label>Fuel consumed per km(Km/L)</label><br>
+            <input type="number" name="Mileage" value="{{mileage}}">
+    </div>
+    </footer>
+</body>
+</html>
